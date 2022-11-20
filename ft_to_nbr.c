@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:07:42 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/18 18:41:32 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/19 19:12:42 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,4 @@ void	ft_put_snbr(int n)
 void	ft_put_unbr(unsigned int n)
 {
 	ft_putstr(ft_to_nbr(n));
-}
+}     

@@ -6,12 +6,12 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:25:53 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/18 18:59:27 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 11:26:28 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+
 int	ft_putchar(char c, int reset)
 {
 	int out;
@@ -20,11 +20,11 @@ int	ft_putchar(char c, int reset)
 	if (reset == 1)
 	{
 		out = count;
-		printf("---->%d, %d\n", count++, out);
-		//count = 0;
+		count = 0;
 		return (out);
 	}
 	write(1, &c, 1);
+	++count;
 	return (0);
 }
 

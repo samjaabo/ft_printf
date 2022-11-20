@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:49:38 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/18 18:43:46 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:14:24 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 static void	ft_formats(va_list ptr, char format)
 {
-	if (format == 'c')
+	if (format == '\0')
+		return ;
+	else if (format == 'c')
 		ft_putchar(va_arg(ptr, int), 0);
 	else if (format == 's')
-		ft_putstr(va_arg(ptr, char*));
+		ft_putstr(va_arg(ptr, char *));
 	else if (format == 'p')
-		ft_putptr(va_arg(ptr, unsigned long));
+		ft_putptr(va_arg(ptr, void *));
 	else if (format == 'd' || format == 'i')
 		ft_put_snbr(va_arg(ptr, int));
 	else if (format == 'u')
@@ -38,6 +40,8 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	ptr;
 
+	if (write(1, 0, 0) < 0)
+		return (-1);
 	va_start(ptr, format);
 	while (*format)
 	{
