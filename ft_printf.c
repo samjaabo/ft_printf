@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:49:38 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/20 14:14:24 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:48:20 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ int	ft_printf(const char *format, ...)
 			ft_formats(ptr, *++format);
 		else
 			ft_putchar(*format, 0);
-		++format;
+		if (*format != '\0')
+			++format;
 	}
 	va_end(ptr);
 	return (ft_putchar('\0', 1));

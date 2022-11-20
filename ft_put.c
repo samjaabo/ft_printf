@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:25:53 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/20 11:26:28 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:47:23 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 int	ft_putchar(char c, int reset)
 {
-	int out;
+	int			out;
 	static int	count;
 
 	if (reset == 1)
-	{
-		out = count;
-		count = 0;
-		return (out);
-	}
+		return (out = count, count = 0, out);
 	write(1, &c, 1);
 	++count;
 	return (0);

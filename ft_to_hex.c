@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:22:16 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/20 14:27:52 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:48:44 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char	*ft_to_hex(unsigned long long n, const char *base)
 
 void	ft_puthex_lower(unsigned int n)
 {
-	char *s;
+	char	*s;
 
 	s = ft_to_hex(n, "0123456789abcdef");
 	while (*s == '0')
@@ -50,7 +50,7 @@ void	ft_puthex_lower(unsigned int n)
 
 void	ft_puthex_upper(unsigned int n)
 {
-	char *s;
+	char	*s;
 
 	s = ft_to_hex(n, "0123456789ABCDEF");
 	while (*s == '0')

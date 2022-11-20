@@ -6,7 +6,7 @@
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:07:42 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/19 19:12:42 by samjaabo         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:49:38 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 static char	*ft_to_nbr(unsigned int n)
 {
 	static char	s[11];
-	char *str;
-	
+	char		*str;
+
 	s[0] = n / 1000000000 + '0';
 	s[1] = n % 1000000000 / 100000000 + '0';
 	s[2] = n % 100000000 / 10000000 + '0';
@@ -49,4 +49,4 @@ void	ft_put_snbr(int n)
 void	ft_put_unbr(unsigned int n)
 {
 	ft_putstr(ft_to_nbr(n));
-}     
+}
