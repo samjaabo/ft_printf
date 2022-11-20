@@ -6,12 +6,12 @@
 #    By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/18 17:54:00 by samjaabo          #+#    #+#              #
-#    Updated: 2022/11/18 18:12:22 by samjaabo         ###   ########.fr        #
+#    Updated: 2022/11/20 15:07:25 by samjaabo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_put.c ft_to_hex.c ft_to_nbr.c ft_printf.c
-OBJS = ft_put.o ft_to_hex.o ft_to_nbr.o ft_printf.o
+SRCS = ft_to_put.c ft_to_hex.c ft_to_nbr.c ft_printf.c ft_printf_utils.c
+OBJS = ft_to_put.o ft_to_hex.o ft_to_nbr.o ft_printf.o ft_printf_utils.o
 
 NAME = libftprintf.a
 CC = cc

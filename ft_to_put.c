@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_to_nbr.c                                        :+:      :+:    :+:   */
+/*   ft_put.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samjaabo <samjaabo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 13:07:42 by samjaabo          #+#    #+#             */
-/*   Updated: 2022/11/20 15:04:37 by samjaabo         ###   ########.fr       */
+/*   Created: 2022/11/16 14:25:53 by samjaabo          #+#    #+#             */
+/*   Updated: 2022/11/20 14:47:23 by samjaabo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_put_snbr(int n)
+int	ft_putchar(char c, int reset)
 {
-	if (n < 0)
-	{
-		ft_putchar('-', 0);
-		n = n * -1;
-	}
-	ft_putstr(ft_to_nbr((unsigned int)n));
+	int			out;
+	static int	count;
+
+	if (reset == 1)
+		return (out = count, count = 0, out);
+	write(1, &c, 1);
+	++count;
+	return (0);
 }
 
-void	ft_put_unbr(unsigned int n)
+void	ft_putstr(char *s)
 {
-	ft_putstr(ft_to_nbr(n));
+	if (!s)
+		return (ft_putstr("(null)"));
+	while (*s)
+		ft_putchar(*s++, 0);
 }
